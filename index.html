@@ -3,100 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube-like Feed</title>
+    <title>Embedded YouTube Videos</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 20px;
+            margin: 20px;
+            background-color: #f4f4f4;
         }
-        .container {
-            max-width: 800px;
-            margin: auto;
+        h1 {
+            text-align: center;
         }
-        .video-card {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            overflow: hidden;
+        .video-container {
+            margin: 20px 0;
+            text-align: center;
         }
-        .thumbnail {
-            width: 100%;
-            height: auto;
-        }
-        .video-info {
-            padding: 15px;
-        }
-        .video-title {
-            font-size: 18px;
-            margin: 0;
-        }
-        .know-more {
-            background-color: #ff0000;
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-        .description {
-            display: none; /* Initially hide the description */
-            margin-top: 10px;
-            font-size: 14px;
-            color: #555;
+        iframe {
+            width: 560px;
+            height: 315px;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>YouTube-like Feed</h1>
+    <h1>My VIDEO LECTURES </h1>
 
-        <div class="video-card">
-            <img class="thumbnail" src="https://via.placeholder.com/400x225" alt="Video Thumbnail">
-            <div class="video-info">
-                <h2 class="video-title">Sample Video Title 1</h2>
-                <button class="know-more">Know More</button>
-                <p class="description">This is a sample description for Video 1. Here you can provide additional information about the video content.</p>
-            </div>
-        </div>
-
-        <div class="video-card">
-            <img class="thumbnail" src="https://via.placeholder.com/400x225" alt="Video Thumbnail">
-            <div class="video-info">
-                <h2 class="video-title">Sample Video Title 2</h2>
-                <button class="know-more">Know More</button>
-                <p class="description">This is a sample description for Video 2. Here you can provide additional information about the video content.</p>
-            </div>
-        </div>
-
-        <div class="video-card">
-            <img class="thumbnail" src="https://via.placeholder.com/400x225" alt="Video Thumbnail">
-            <div class="video-info">
-                <h2 class="video-title">Sample Video Title 3</h2>
-                <button class="know-more">Know More</button>
-                <p class="description">This is a sample description for Video 3. Here you can provide additional information about the video content.</p>
-            </div>
-        </div>
+    <div class="video-container">
+        <h2>Video Title 1</h2>
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
     </div>
 
-    <script>
-        // Add event listeners to all "Know More" buttons
-        const knowMoreButtons = document.querySelectorAll('.know-more');
-        knowMoreButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const description = this.nextElementSibling; // Get the next sibling (description)
-                if (description.style.display === 'none' || description.style.display === '') {
-                    description.style.display = 'block'; // Show the description
-                } else {
-                    description.style.display = 'none'; // Hide the description
-                }
-            });
-        });
-    </script>
+    <div class="video-container">
+        <h2>Video Title 2</h2>
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="video-container">
+        <h2>Video Title 3</h2>
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="video-container">
+        <h2>Video Title 4</h2>
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_4" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="video-container">
+        <h2>Video Title 5</h2>
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_5" frameborder="0" allowfullscreen></iframe>
+    </div>
 
 </body>
 </html>
